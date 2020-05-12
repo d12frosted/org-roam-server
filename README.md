@@ -20,6 +20,17 @@ git clone https://github.com/goktug97/org-roam-server
   :load-path <path-to-org-roam-server-folder>)
 ```
 
+## use-package with straight.el
+
+```elisp
+(use-package org-roam-server
+  :straight (org-roam-server
+             :host github
+             :repo "org-roam/org-roam-server"
+             :files (:defaults ("assets/" . "assets/")))
+  :defer t)
+```
+
 ## Usage
 
 Use `M-x org-roam-server-mode RET` to enable the global mode. 
